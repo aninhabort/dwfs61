@@ -169,6 +169,7 @@ app.use((req, res) => {
   res.status(404).send(`<h2>Erro 404 - Recurso não encontrado</h2>`)
 })
 
-app.listen(3000, () => {
+const port = process.env.PORT || 3001
+app.listen(port, () => {
   console.log('Servidor rodando na porta 3000')
 })

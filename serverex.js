@@ -165,6 +165,10 @@ app.use('/api/v2', apiV1Router)
 const apiV2Router = require('./routes/apiV2Router')
 app.use('/api/v2', apiV2Router)
 
+
+const apiSeg = require('./routes/apiSeg')
+app.use('/api/seg', apiSeg)
+
 app.use((req, res) => {
   res.status(404).send(`<h2>Erro 404 - Recurso não encontrado</h2>`)
 })
